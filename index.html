@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Parquet Aranibar | Pisos y Acabados Premium</title>
+  <title>Parquet Aranibar | Pisos y Acabados</title>
 
   <meta name="description"
         content="Venta, instalación, pulido y restauración de parquet, parquetón, pisos SPC y laminados de alta calidad.">
@@ -15,1527 +15,1212 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
         rel="stylesheet">
 
-  <style>
-    :root {
-      --ink: #151412;
-      --ink-2: #22201d;
-      --cream: #f7f4ee;
-      --white: #ffffff;
-      --taupe: #756e65;
-      --line: #ddd6cc;
-      --gold: #b5935b;
-      --gold-light: #d3b983;
-      --green: #25d366;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "DM Sans", Arial, sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 48px));
-      margin: auto;
-    }
-
-    /* HEADER */
-
-    .header {
-      position: absolute;
-      z-index: 100;
-      top: 0;
-      left: 0;
-      width: 100%;
-      border-bottom: 1px solid rgba(255,255,255,.18);
-    }
-
-    .header-inner {
-      min-height: 92px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      color: #fff;
-    }
-
-    .brand-mark {
-      width: 50px;
-      height: 50px;
-      border: 1px solid var(--gold-light);
-      display: grid;
-      place-items: center;
-      color: var(--gold-light);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 18px;
-    }
-
-    .brand-name {
-      display: block;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 19px;
-      font-weight: 600;
-      letter-spacing: .7px;
-    }
-
-    .brand-sub {
-      display: block;
-      margin-top: 2px;
-      font-size: 9px;
-      letter-spacing: 2.2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.65);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav a {
-      position: relative;
-      color: rgba(255,255,255,.88);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 0;
-      height: 1px;
-      background: var(--gold-light);
-      transition: .25s;
-    }
-
-    .nav a:hover::after {
-      width: 100%;
-    }
-
-    .header-cta {
-      padding: 12px 22px;
-      border: 1px solid var(--gold-light);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      transition: .25s;
-    }
-
-    .header-cta:hover {
-      background: var(--gold-light);
-      color: var(--ink);
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 820px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(12,11,10,.94) 0%,
-          rgba(12,11,10,.78) 42%,
-          rgba(12,11,10,.25) 78%
-        ),
-        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90")
-        center / cover no-repeat;
-    }
-
-    .hero-content {
-      padding-top: 95px;
-      padding-bottom: 150px;
-      max-width: 760px;
-    }
-
-    .eyebrow {
-      margin-bottom: 22px;
-      color: var(--gold-light);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      max-width: 760px;
-      margin-bottom: 28px;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(56px, 7vw, 96px);
-      font-weight: 500;
-      line-height: .98;
-      letter-spacing: -2.5px;
-    }
-
-    .hero h1 em {
-      display: block;
-      color: var(--gold-light);
-      font-weight: 500;
-    }
-
-    .hero-lead {
-      max-width: 620px;
-      margin-bottom: 38px;
-      color: rgba(255,255,255,.82);
-      font-size: 17px;
-      line-height: 1.9;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .btn {
-      min-height: 54px;
-      padding: 0 27px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 700;
-      transition: .25s;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--ink);
-    }
-
-    .btn-gold:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,.55);
-      color: #fff;
-      backdrop-filter: blur(5px);
-    }
-
-    .btn-outline:hover {
-      background: #fff;
-      color: var(--ink);
-    }
-
-    .hero-strip {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      width: min(1180px, calc(100% - 48px));
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      background: rgba(19,18,16,.91);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(255,255,255,.18);
-    }
-
-    .hero-strip-item {
-      min-height: 110px;
-      padding: 25px 30px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto auto;
-      gap: 1px 18px;
-      align-items: center;
-      border-right: 1px solid rgba(255,255,255,.12);
-    }
-
-    .hero-strip-item:last-child {
-      border-right: 0;
-    }
-
-    .hero-number {
-      grid-row: 1 / 3;
-      color: var(--gold-light);
-      font-family: "Playfair Display", serif;
-      font-size: 13px;
-    }
-
-    .hero-strip strong {
-      font-family: "Playfair Display", serif;
-      font-size: 21px;
-      font-weight: 500;
-    }
-
-    .hero-strip small {
-      color: rgba(255,255,255,.5);
-      font-size: 11px;
-    }
-
-    /* INTRO */
-
-    .intro {
-      padding: 125px 0;
-      background: var(--cream);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 100px;
-      align-items: center;
-    }
-
-    .label {
-      margin-bottom: 17px;
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 3.5px;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(42px, 5vw, 62px);
-      font-weight: 500;
-      line-height: 1.1;
-      letter-spacing: -1.2px;
-    }
-
-    .intro-lead {
-      margin-bottom: 22px;
-      font-family: "Playfair Display", serif;
-      font-size: 25px;
-      line-height: 1.5;
-    }
-
-    .intro-copy p:last-child {
-      color: var(--taupe);
-      line-height: 1.9;
-      font-size: 14px;
-    }
-
-    /* PRODUCTOS */
-
-    .products {
-      padding: 115px 0;
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .section-header {
-      margin-bottom: 55px;
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 50px;
-    }
-
-    .section-header > div {
-      max-width: 720px;
-    }
-
-    .section-header-copy {
-      max-width: 360px;
-      color: rgba(255,255,255,.53);
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 16px;
-    }
-
-    .product {
-      min-height: 560px;
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-      display: flex;
-      align-items: flex-end;
-      padding: 32px;
-      background-position: center;
-      background-size: cover;
-    }
-
-    .product::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      background: inherit;
-      background-position: center;
-      background-size: cover;
-      transition: transform .6s ease;
-    }
-
-    .product::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background:
-        linear-gradient(
-          180deg,
-          rgba(12,12,11,.05) 20%,
-          rgba(12,12,11,.92) 100%
-        );
-    }
-
-    .product:hover::before {
-      transform: scale(1.055);
-    }
-
-    .product-parquet {
-      background:
-        #6b4a33
-        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=88")
-        center / cover no-repeat;
-    }
-
-    .product-spc {
-      background:
-        #88715c
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=88")
-        center / cover no-repeat;
-    }
-
-    .product-laminado {
-      background:
-        #705b4a
-        url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=88")
-        center / cover no-repeat;
-    }
-
-    .product-top {
-      position: absolute;
-      top: 27px;
-      left: 29px;
-      right: 29px;
-      display: flex;
-      justify-content: space-between;
-      color: rgba(255,255,255,.75);
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-
-    .product-category {
-      color: var(--gold-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-    }
-
-    .product h3 {
-      margin: 7px 0 13px;
-      font-family: "Playfair Display", serif;
-      font-size: 34px;
-      font-weight: 500;
-      line-height: 1.05;
-    }
-
-    .product p {
-      max-width: 330px;
-      margin-bottom: 23px;
-      color: rgba(255,255,255,.68);
-      font-size: 13px;
-      line-height: 1.75;
-    }
-
-    .product-link {
-      display: inline-block;
-      padding-bottom: 5px;
-      border-bottom: 1px solid rgba(255,255,255,.55);
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    /* SERVICIOS */
-
-    .services {
-      padding: 120px 0;
-      background: #f2ede5;
-    }
-
-    .services-header {
-      max-width: 720px;
-      margin-bottom: 60px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-    .service-card {
-      min-height: 300px;
-      padding: 34px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,.28);
-      transition: .25s;
-    }
-
-    .service-card:hover {
-      background: #fff;
-      transform: translateY(-3px);
-    }
-
-    .service-number {
-      color: var(--gold);
-      font-family: "Playfair Display", serif;
-      font-size: 13px;
-    }
-
-    .service-icon {
-      width: 42px;
-      height: 42px;
-      margin: 47px 0 25px;
-      color: var(--gold);
-    }
-
-    .service-card h3 {
-      margin-bottom: 12px;
-      font-family: "Playfair Display", serif;
-      font-size: 25px;
-      font-weight: 500;
-    }
-
-    .service-card p {
-      color: var(--taupe);
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    /* NOSOTROS */
-
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 720px;
-      background: #fff;
-    }
-
-    .about-photo {
-      position: relative;
-      min-height: 680px;
-      background:
-        #81705f
-        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90")
-        center / cover no-repeat;
-    }
-
-    .about-badge {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: min(380px, 90%);
-      padding: 38px;
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .about-badge small {
-      display: block;
-      margin-bottom: 12px;
-      color: var(--gold-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 3px;
-    }
-
-    .about-badge strong {
-      display: block;
-      font-family: "Playfair Display", serif;
-      font-size: 27px;
-      font-weight: 500;
-      line-height: 1.35;
-    }
-
-    .about-content {
-      padding: 95px 10%;
-      align-self: center;
-    }
-
-    .about-content .section-title {
-      margin-bottom: 28px;
-    }
-
-    .about-lead {
-      margin-bottom: 20px;
-      font-family: "Playfair Display", serif;
-      font-size: 22px;
-      line-height: 1.55;
-    }
-
-    .about-text {
-      color: var(--taupe);
-      font-size: 14px;
-      line-height: 1.9;
-    }
-
-    .benefits {
-      margin-top: 35px;
-      border-top: 1px solid var(--line);
-    }
-
-    .benefit {
-      padding: 14px 0;
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      border-bottom: 1px solid var(--line);
-      color: #5f5952;
-      font-size: 12px;
-    }
-
-    .benefit::before {
-      content: "";
-      width: 23px;
-      height: 1px;
-      background: var(--gold);
-    }
-
-    /* CTA */
-
-    .cta {
-      padding: 100px 24px;
-      text-align: center;
-      background: var(--gold);
-    }
-
-    .cta .label {
-      color: rgba(21,20,18,.65);
-    }
-
-    .cta h2 {
-      max-width: 900px;
-      margin: 0 auto 23px;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(44px, 6vw, 74px);
-      font-weight: 500;
-      line-height: 1.05;
-    }
-
-    .cta > p {
-      margin-bottom: 30px;
-      color: rgba(21,20,18,.64);
-      font-size: 14px;
-    }
-
-    .btn-dark {
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .btn-dark:hover {
-      background: #000;
-      transform: translateY(-2px);
-    }
-
-    /* CONTACTO */
-
-    .contact {
-      padding: 85px 0;
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr .8fr;
-      gap: 80px;
-    }
-
-    .contact-brand .brand-mark {
-      margin-bottom: 23px;
-    }
-
-    .contact-brand h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 35px;
-      font-weight: 500;
-    }
-
-    .contact-brand p {
-      margin-top: 5px;
-      color: rgba(255,255,255,.45);
-      font-size: 11px;
-    }
-
-    .contact-col span {
-      display: block;
-      margin-bottom: 20px;
-      color: var(--gold-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 3px;
-    }
-
-    .contact-col a {
-      display: block;
-      padding: 11px 0;
-      border-bottom: 1px solid rgba(255,255,255,.12);
-      font-family: "Playfair Display", serif;
-      font-size: 21px;
-    }
-
-    .contact-col p {
-      padding: 6px 0;
-      color: rgba(255,255,255,.52);
-      font-size: 12px;
-    }
-
-    /* FOOTER */
-
-    .footer {
-      min-height: 70px;
-      padding: 20px 0;
-      background: #0b0b0a;
-      color: rgba(255,255,255,.33);
-      font-size: 10px;
-    }
-
-    .footer-inner {
-      min-height: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    /* WHATSAPP */
-
-    .whatsapp {
-      position: fixed;
-      z-index: 500;
-      right: 22px;
-      bottom: 22px;
-      min-height: 54px;
-      padding: 0 18px;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      border-radius: 50px;
-      background: var(--green);
-      color: #fff;
-      box-shadow: 0 12px 32px rgba(0,0,0,.25);
-      font-size: 12px;
-      font-weight: 700;
-      transition: .25s;
-    }
-
-    .whatsapp:hover {
-      transform: translateY(-3px);
-    }
-
-    .whatsapp svg {
-      width: 21px;
-      height: 21px;
-      fill: currentColor;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 1000px) {
-      .nav {
-        display: none;
-      }
-
-      .intro-grid {
-        gap: 50px;
-      }
-
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .product {
-        min-height: 500px;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .contact-grid {
-        gap: 40px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .container {
-        width: min(100% - 36px, 1180px);
-      }
-
-      .header-inner {
-        min-height: 76px;
-      }
-
-      .brand-mark {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
-      }
-
-      .brand-name {
-        font-size: 13px;
-      }
-
-      .brand-sub {
-        display: none;
-      }
-
-      .header-cta {
-        padding: 9px 12px;
-        font-size: 10px;
-      }
-
-      .hero {
-        min-height: 790px;
-        align-items: flex-start;
-        padding-top: 135px;
-        background-position: 58% center;
-      }
-
-      .hero {
-        background:
-          linear-gradient(
-            180deg,
-            rgba(12,11,10,.90) 0%,
-            rgba(12,11,10,.66) 60%,
-            rgba(12,11,10,.87) 100%
-          ),
-          url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=88")
-          center / cover no-repeat;
-      }
-
-      .hero-content {
-        padding-top: 0;
-        padding-bottom: 250px;
-      }
-
-      .hero h1 {
-        font-size: 53px;
-        letter-spacing: -1.8px;
-      }
-
-      .hero-lead {
-        font-size: 15px;
-      }
-
-      .actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-strip {
-        left: 0;
-        width: 100%;
-        transform: none;
-        grid-template-columns: 1fr;
-      }
-
-      .hero-strip-item {
-        min-height: auto;
-        padding: 12px 22px;
-        grid-template-columns: 42px 1fr auto;
-        grid-template-rows: 1fr;
-        border-right: 0;
-        border-bottom: 1px solid rgba(255,255,255,.1);
-      }
-
-      .hero-number {
-        grid-row: auto;
-      }
-
-      .hero-strip small {
-        text-align: right;
-      }
-
-      .intro {
-        padding: 80px 0;
-      }
-
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .section-title {
-        font-size: 41px;
-      }
-
-      .products {
-        padding: 80px 0;
-      }
-
-      .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-      }
-
-      .product {
-        min-height: 455px;
-        padding: 25px;
-      }
-
-      .product h3 {
-        font-size: 30px;
-      }
-
-      .services {
-        padding: 80px 0;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: 260px;
-      }
-
-      .about {
-        grid-template-columns: 1fr;
-      }
-
-      .about-photo {
-        min-height: 500px;
-      }
-
-      .about-content {
-        padding: 75px 22px;
-      }
-
-      .cta {
-        padding: 75px 22px;
-      }
-
-      .cta h2 {
-        font-size: 46px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .whatsapp {
-        right: 14px;
-        bottom: 14px;
-        width: 54px;
-        padding: 0;
-        justify-content: center;
-      }
-
-      .whatsapp span {
-        display: none;
-      }
-    }
-  </style>
+<style>
+
+:root{
+  --negro:#151412;
+  --negro2:#211f1c;
+  --marfil:#f7f4ee;
+  --blanco:#ffffff;
+  --dorado:#b79359;
+  --dorado2:#d8bd86;
+  --gris:#746e66;
+  --linea:#ddd6cc;
+  --verde:#25d366;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--marfil);
+  color:var(--negro);
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  width:100%;
+}
+
+.contenedor{
+  width:min(1200px,calc(100% - 48px));
+  margin:auto;
+}
+
+
+/* HEADER */
+
+.header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.header-inner{
+  min-height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.marca{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:white;
+}
+
+.logo{
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--dorado2);
+  color:var(--dorado2);
+  font-family:"Playfair Display",serif;
+  font-size:18px;
+}
+
+.marca strong{
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:19px;
+  letter-spacing:1px;
+}
+
+.marca small{
+  display:block;
+  margin-top:2px;
+  color:rgba(255,255,255,.65);
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:rgba(255,255,255,.88);
+  font-size:12px;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--dorado2);
+}
+
+.cotizar-header{
+  padding:12px 22px;
+  border:1px solid var(--dorado2);
+  color:white;
+  font-size:12px;
+  font-weight:700;
+}
+
+.cotizar-header:hover{
+  background:var(--dorado2);
+  color:var(--negro);
+}
+
+
+/* HERO */
+
+.hero{
+  min-height:850px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  color:white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,10,9,.94) 0%,
+      rgba(10,10,9,.76) 42%,
+      rgba(10,10,9,.18) 82%
+    ),
+    url("img/parquet-hero.jpg.jpeg")
+    center/cover no-repeat;
+}
+
+.hero-inner{
+  max-width:760px;
+  padding-top:100px;
+  padding-bottom:160px;
+}
+
+.etiqueta{
+  margin-bottom:20px;
+  color:var(--dorado2);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin-bottom:28px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(58px,7vw,96px);
+  line-height:.98;
+  font-weight:500;
+  letter-spacing:-2px;
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--dorado2);
+  font-style:italic;
+}
+
+.hero-texto{
+  max-width:620px;
+  margin-bottom:38px;
+  color:rgba(255,255,255,.82);
+  font-size:17px;
+  line-height:1.85;
+}
+
+.botones{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.btn{
+  min-height:54px;
+  padding:0 27px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+  transition:.25s;
+}
+
+.btn-dorado{
+  background:var(--dorado);
+  color:var(--negro);
+}
+
+.btn-dorado:hover{
+  background:var(--dorado2);
+  transform:translateY(-2px);
+}
+
+.btn-borde{
+  border:1px solid rgba(255,255,255,.58);
+  color:white;
+}
+
+.btn-borde:hover{
+  background:white;
+  color:var(--negro);
+}
+
+
+/* HERO INFO */
+
+.hero-info{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+
+  width:min(1200px,calc(100% - 48px));
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  background:rgba(15,14,12,.9);
+  backdrop-filter:blur(12px);
+
+  border-top:1px solid rgba(255,255,255,.18);
+}
+
+.hero-info div{
+  min-height:110px;
+  padding:24px 30px;
+  border-right:1px solid rgba(255,255,255,.12);
+}
+
+.hero-info div:last-child{
+  border-right:0;
+}
+
+.hero-info span{
+  color:var(--dorado2);
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+.hero-info strong{
+  display:block;
+  margin:3px 0;
+  font-family:"Playfair Display",serif;
+  font-size:22px;
+  font-weight:500;
+}
+
+.hero-info small{
+  color:rgba(255,255,255,.5);
+}
+
+
+/* TITULOS */
+
+.mini{
+  margin-bottom:16px;
+  color:var(--dorado);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.titulo{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(40px,5vw,60px);
+  line-height:1.1;
+  font-weight:500;
+}
+
+
+/* PRESENTACION */
+
+.presentacion{
+  padding:120px 0;
+}
+
+.presentacion-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
+  align-items:center;
+}
+
+.presentacion-texto strong{
+  display:block;
+  margin-bottom:20px;
+  font-family:"Playfair Display",serif;
+  font-size:25px;
+  font-weight:500;
+  line-height:1.5;
+}
+
+.presentacion-texto p{
+  color:var(--gris);
+  font-size:14px;
+  line-height:1.9;
+}
+
+
+/* PRODUCTOS */
+
+.productos{
+  padding:110px 0;
+  background:var(--negro);
+  color:white;
+}
+
+.productos-cabeza{
+  margin-bottom:55px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:60px;
+}
+
+.productos-cabeza > p{
+  max-width:370px;
+  color:rgba(255,255,255,.55);
+  font-size:13px;
+  line-height:1.8;
+}
+
+.grid-productos{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.producto{
+  min-height:570px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  padding:32px;
+}
+
+.producto > img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.65s;
+}
+
+.producto:hover > img{
+  transform:scale(1.05);
+}
+
+.producto::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 25%,
+      rgba(0,0,0,.90) 100%
+    );
+}
+
+.numero{
+  position:absolute;
+  top:27px;
+  right:27px;
+  z-index:2;
+  color:rgba(255,255,255,.70);
+  font-family:"Playfair Display",serif;
+}
+
+.producto-texto{
+  position:relative;
+  z-index:2;
+}
+
+.producto-texto > span{
+  color:var(--dorado2);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2.5px;
+}
+
+.producto h3{
+  margin:8px 0 13px;
+  font-family:"Playfair Display",serif;
+  font-size:34px;
+  font-weight:500;
+}
+
+.producto p{
+  margin-bottom:22px;
+  color:rgba(255,255,255,.72);
+  font-size:13px;
+  line-height:1.75;
+}
+
+.producto-link{
+  padding-bottom:5px;
+  border-bottom:1px solid rgba(255,255,255,.55);
+  font-size:11px;
+  font-weight:700;
+}
+
+
+/* INSTALACION */
+
+.instalacion{
+  padding:120px 0;
+  background:white;
+}
+
+.instalacion-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:80px;
+  align-items:center;
+}
+
+.instalacion-foto img{
+  height:650px;
+  object-fit:cover;
+}
+
+.instalacion-texto > p{
+  margin-top:25px;
+  margin-bottom:30px;
+  color:var(--gris);
+  line-height:1.9;
+}
+
+.lista{
+  border-top:1px solid var(--linea);
+}
+
+.lista div{
+  padding:17px 0;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border-bottom:1px solid var(--linea);
+  font-size:13px;
+}
+
+.lista div::before{
+  content:"";
+  width:24px;
+  height:1px;
+  background:var(--dorado);
+}
+
+
+/* SERVICIOS */
+
+.servicios{
+  padding:120px 0;
+  background:#f0ebe3;
+}
+
+.servicios-grid{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--linea);
+  border-left:1px solid var(--linea);
+}
+
+.servicio{
+  min-height:285px;
+  padding:32px;
+  border-right:1px solid var(--linea);
+  border-bottom:1px solid var(--linea);
+  transition:.25s;
+}
+
+.servicio:hover{
+  background:white;
+  transform:translateY(-3px);
+}
+
+.servicio span{
+  color:var(--dorado);
+  font-family:"Playfair Display",serif;
+}
+
+.servicio h3{
+  margin:65px 0 13px;
+  font-family:"Playfair Display",serif;
+  font-size:25px;
+  font-weight:500;
+}
+
+.servicio p{
+  color:var(--gris);
+  font-size:13px;
+  line-height:1.8;
+}
+
+
+/* ZOCALOS */
+
+.zocalos{
+  padding:110px 0;
+  background:white;
+}
+
+.zocalos-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.zocalos-texto p:last-child{
+  margin-top:24px;
+  color:var(--gris);
+  line-height:1.9;
+}
+
+.zocalos img{
+  height:550px;
+  object-fit:cover;
+}
+
+
+/* GALERIA */
+
+.galeria{
+  padding:110px 0;
+  background:var(--negro);
+  color:white;
+}
+
+.galeria-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr;
+  grid-template-rows:310px 310px;
+  gap:14px;
+}
+
+.galeria-item{
+  position:relative;
+  overflow:hidden;
+}
+
+.galeria-item:first-child{
+  grid-row:1/3;
+}
+
+.galeria-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.galeria-item:hover img{
+  transform:scale(1.04);
+}
+
+.caption{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:55px 22px 20px;
+  background:linear-gradient(transparent,rgba(0,0,0,.82));
+}
+
+.caption strong{
+  font-family:"Playfair Display",serif;
+  font-size:21px;
+  font-weight:500;
+}
+
+
+/* CTA */
+
+.cta{
+  padding:100px 24px;
+  text-align:center;
+  background:var(--dorado);
+}
+
+.cta h2{
+  max-width:900px;
+  margin:0 auto 20px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(44px,6vw,72px);
+  line-height:1.05;
+  font-weight:500;
+}
+
+.cta p{
+  margin-bottom:30px;
+  color:rgba(0,0,0,.60);
+}
+
+.btn-negro{
+  background:var(--negro);
+  color:white;
+}
+
+
+/* CONTACTO */
+
+.contacto{
+  padding:85px 0;
+  background:var(--negro);
+  color:white;
+}
+
+.contacto-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr .8fr;
+  gap:70px;
+}
+
+.contacto h3{
+  margin-top:20px;
+  font-family:"Playfair Display",serif;
+  font-size:34px;
+  font-weight:500;
+}
+
+.contacto p{
+  color:rgba(255,255,255,.5);
+}
+
+.contacto-col span{
+  display:block;
+  margin-bottom:18px;
+  color:var(--dorado2);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:3px;
+}
+
+.contacto-col a{
+  display:block;
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  font-family:"Playfair Display",serif;
+  font-size:20px;
+}
+
+
+/* FOOTER */
+
+footer{
+  padding:25px 0;
+  background:#090908;
+  color:rgba(255,255,255,.35);
+  font-size:10px;
+}
+
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:5000;
+
+  min-height:54px;
+  padding:0 19px;
+
+  display:flex;
+  align-items:center;
+  gap:9px;
+
+  border-radius:50px;
+
+  background:var(--verde);
+  color:white;
+
+  box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+  font-size:12px;
+  font-weight:700;
+}
+
+.whatsapp svg{
+  width:21px;
+  height:21px;
+  fill:white;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+  nav{
+    display:none;
+  }
+
+  .grid-productos{
+    grid-template-columns:1fr;
+  }
+
+  .producto{
+    min-height:500px;
+  }
+
+  .presentacion-grid,
+  .instalacion-grid,
+  .zocalos-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .servicios-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .galeria-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+  }
+
+  .galeria-item:first-child{
+    grid-row:auto;
+    grid-column:1/3;
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .contenedor{
+    width:calc(100% - 34px);
+  }
+
+  .header-inner{
+    min-height:76px;
+  }
+
+  .logo{
+    width:40px;
+    height:40px;
+    font-size:14px;
+  }
+
+  .marca strong{
+    font-size:13px;
+  }
+
+  .marca small{
+    display:none;
+  }
+
+  .cotizar-header{
+    padding:9px 12px;
+    font-size:10px;
+  }
+
+  .hero{
+    min-height:790px;
+    align-items:flex-start;
+    padding-top:135px;
+    background-position:58% center;
+  }
+
+  .hero-inner{
+    padding-top:0;
+    padding-bottom:245px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero-texto{
+    font-size:15px;
+  }
+
+  .botones{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-info{
+    left:0;
+    transform:none;
+    width:100%;
+    grid-template-columns:1fr;
+  }
+
+  .hero-info div{
+    min-height:auto;
+    padding:11px 20px;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+
+  .presentacion,
+  .productos,
+  .instalacion,
+  .servicios,
+  .zocalos,
+  .galeria{
+    padding:75px 0;
+  }
+
+  .titulo{
+    font-size:40px;
+  }
+
+  .productos-cabeza{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .producto{
+    min-height:450px;
+  }
+
+  .instalacion-foto img{
+    height:480px;
+  }
+
+  .servicios-grid{
+    grid-template-columns:1fr;
+  }
+
+  .zocalos img{
+    height:430px;
+  }
+
+  .galeria-grid{
+    grid-template-columns:1fr;
+  }
+
+  .galeria-item:first-child{
+    grid-column:auto;
+  }
+
+  .galeria-item{
+    height:330px;
+  }
+
+  .cta{
+    padding:75px 18px;
+  }
+
+  .cta h2{
+    font-size:45px;
+  }
+
+  .contacto-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .footer-grid{
+    flex-direction:column;
+  }
+
+  .whatsapp{
+    width:54px;
+    padding:0;
+    justify-content:center;
+  }
+
+  .whatsapp span{
+    display:none;
+  }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<header class="header">
-  <div class="container header-inner">
 
-    <a href="#inicio" class="brand">
-      <span class="brand-mark">PA</span>
-      <span>
-        <span class="brand-name">PARQUET ARANIBAR</span>
-        <span class="brand-sub">Pisos · Madera · Acabados</span>
+<!-- HEADER -->
+
+<header class="header">
+
+  <div class="contenedor header-inner">
+
+    <a href="#inicio" class="marca">
+
+      <span class="logo">
+        PA
       </span>
+
+      <span>
+        <strong>PARQUET ARANIBAR</strong>
+        <small>Pisos · Madera · Acabados</small>
+      </span>
+
     </a>
 
-    <nav class="nav">
+
+    <nav>
       <a href="#inicio">Inicio</a>
       <a href="#productos">Pisos</a>
       <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
+      <a href="#trabajos">Trabajos</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
-    <a class="header-cta"
-       target="_blank"
-       href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20quisiera%20una%20cotizacion.">
+
+    <a
+      class="cotizar-header"
+      target="_blank"
+      href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20deseo%20una%20cotizacion.">
+
       Cotizar
+
     </a>
 
   </div>
+
 </header>
 
 
-<main>
 
-  <section class="hero" id="inicio">
+<!-- PORTADA -->
 
-    <div class="container hero-content">
+<section class="hero" id="inicio">
 
-      <p class="eyebrow">
-        Venta · Instalación · Restauración
-      </p>
+  <div class="contenedor hero-inner">
 
-      <h1>
-        Pisos que transforman
-        <em>cada espacio.</em>
-      </h1>
-
-      <p class="hero-lead">
-        Parquet, parquetón, SPC y laminados seleccionados para
-        hogares, oficinas y proyectos comerciales, con instalación
-        y acabados profesionales.
-      </p>
-
-      <div class="actions">
-
-        <a class="btn btn-gold"
-           target="_blank"
-           href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20quiero%20solicitar%20una%20cotizacion.">
-          Solicitar cotización
-        </a>
-
-        <a class="btn btn-outline" href="#productos">
-          Ver nuestros pisos
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="hero-strip">
-
-      <div class="hero-strip-item">
-        <span class="hero-number">01</span>
-        <strong>Parquet</strong>
-        <small>Madera natural</small>
-      </div>
-
-      <div class="hero-strip-item">
-        <span class="hero-number">02</span>
-        <strong>SPC</strong>
-        <small>Alta resistencia</small>
-      </div>
-
-      <div class="hero-strip-item">
-        <span class="hero-number">03</span>
-        <strong>Laminado</strong>
-        <small>Diseño contemporáneo</small>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="intro">
-
-    <div class="container intro-grid">
-
-      <div>
-        <p class="label">Parquet Aranibar</p>
-
-        <h2 class="section-title">
-          Calidad que se aprecia desde el primer paso.
-        </h2>
-      </div>
-
-      <div class="intro-copy">
-
-        <p class="intro-lead">
-          Un buen piso transforma por completo un ambiente.
-        </p>
-
-        <p>
-          Combinamos materiales de calidad, experiencia en instalación
-          y atención personalizada para conseguir pisos elegantes,
-          resistentes y con acabados duraderos.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="products" id="productos">
-
-    <div class="container">
-
-      <div class="section-header">
-
-        <div>
-          <p class="label">Nuestra colección</p>
-
-          <h2 class="section-title">
-            El piso adecuado para cada proyecto.
-          </h2>
-        </div>
-
-        <p class="section-header-copy">
-          Soluciones seleccionadas para viviendas, oficinas,
-          comercios y espacios de alto tránsito.
-        </p>
-
-      </div>
-
-
-      <div class="products-grid">
-
-        <article class="product product-parquet">
-
-          <div class="product-top">
-            <span>01</span>
-            <span>MADERA</span>
-          </div>
-
-          <div>
-            <span class="product-category">
-              MADERA NATURAL
-            </span>
-
-            <h3>Parquet & Parquetón</h3>
-
-            <p>
-              Elegancia natural, calidez y carácter para crear
-              interiores con una presencia atemporal.
-            </p>
-
-            <a class="product-link"
-               target="_blank"
-               href="https://wa.me/51935695708?text=Hola,%20deseo%20informacion%20sobre%20Parquet%20y%20Parqueton.">
-              CONSULTAR →
-            </a>
-          </div>
-
-        </article>
-
-
-        <article class="product product-spc">
-
-          <div class="product-top">
-            <span>02</span>
-            <span>ALTO TRÁNSITO</span>
-          </div>
-
-          <div>
-            <span class="product-category">
-              RESISTENCIA
-            </span>
-
-            <h3>Piso SPC</h3>
-
-            <p>
-              Una solución resistente y moderna con sistema Click,
-              ideal para proyectos residenciales y comerciales.
-            </p>
-
-            <a class="product-link"
-               target="_blank"
-               href="https://wa.me/51935695708?text=Hola,%20deseo%20informacion%20sobre%20Piso%20SPC.">
-              CONSULTAR →
-            </a>
-          </div>
-
-        </article>
-
-
-        <article class="product product-laminado">
-
-          <div class="product-top">
-            <span>03</span>
-            <span>INTERIORES</span>
-          </div>
-
-          <div>
-            <span class="product-category">
-              DISEÑO CONTEMPORÁNEO
-            </span>
-
-            <h3>Piso Laminado</h3>
-
-            <p>
-              Una alternativa elegante y versátil para renovar
-              interiores con apariencia de madera.
-            </p>
-
-            <a class="product-link"
-               target="_blank"
-               href="https://wa.me/51935695708?text=Hola,%20deseo%20informacion%20sobre%20Piso%20Laminado.">
-              CONSULTAR →
-            </a>
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="services" id="servicios">
-
-    <div class="container">
-
-      <div class="services-header">
-
-        <p class="label">Nuestros servicios</p>
-
-        <h2 class="section-title">
-          Del material al acabado final.
-        </h2>
-
-      </div>
-
-
-      <div class="service-grid">
-
-        <article class="service-card">
-          <span class="service-number">01</span>
-
-          <svg class="service-icon"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="1.4">
-            <path d="M3 21h18M5 21V9l7-5 7 5v12"/>
-            <path d="M9 21v-6h6v6"/>
-          </svg>
-
-          <h3>Venta e instalación</h3>
-
-          <p>
-            Parquet, parquetón, SPC y laminados instalados
-            con precisión y cuidado.
-          </p>
-        </article>
-
-
-        <article class="service-card">
-          <span class="service-number">02</span>
-
-          <svg class="service-icon"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="1.4">
-            <path d="M12 3v18M3 12h18"/>
-            <path d="M5 5l14 14M19 5L5 19"/>
-          </svg>
-
-          <h3>Pulido profesional</h3>
-
-          <p>
-            Recuperamos uniformidad, suavidad y presencia
-            en pisos de madera.
-          </p>
-        </article>
-
-
-        <article class="service-card">
-          <span class="service-number">03</span>
-
-          <svg class="service-icon"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="1.4">
-            <path d="M4 17l6-6 4 4 6-7"/>
-            <path d="M4 21h16"/>
-          </svg>
-
-          <h3>Restauración</h3>
-
-          <p>
-            Renovamos pisos deteriorados para prolongar su vida
-            útil y devolverles elegancia.
-          </p>
-        </article>
-
-
-        <article class="service-card">
-          <span class="service-number">04</span>
-
-          <svg class="service-icon"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="1.4">
-            <path d="M4 20L20 4"/>
-            <path d="M14 4h6v6"/>
-            <path d="M4 14v6h6"/>
-          </svg>
-
-          <h3>Trabajos en madera</h3>
-
-          <p>
-            Mantenimiento y acabado de puertas, portones,
-            closets y escaleras.
-          </p>
-        </article>
-
-
-        <article class="service-card">
-          <span class="service-number">05</span>
-
-          <svg class="service-icon"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="1.4">
-            <rect x="4" y="5" width="16" height="14"/>
-            <path d="M4 15h16"/>
-          </svg>
-
-          <h3>Zócalos</h3>
-
-          <p>
-            Venta e instalación para completar cada ambiente
-            con una terminación limpia.
-          </p>
-        </article>
-
-
-        <article class="service-card">
-          <span class="service-number">06</span>
-
-          <svg class="service-icon"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="1.4">
-            <path d="M7 4h10l2 4-7 12L5 8l2-4Z"/>
-            <path d="M8 8h8"/>
-          </svg>
-
-          <h3>Pintura y resane</h3>
-
-          <p>
-            Servicios complementarios para dejar los espacios
-            completamente renovados.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="about" id="nosotros">
-
-    <div class="about-photo">
-
-      <div class="about-badge">
-
-        <small>NUESTRO COMPROMISO</small>
-
-        <strong>
-          Calidad visible en cada detalle.
-        </strong>
-
-      </div>
-
-    </div>
-
-
-    <div class="about-content">
-
-      <p class="label">Parquet Aranibar</p>
-
-      <h2 class="section-title">
-        Un buen trabajo se reconoce en el acabado.
-      </h2>
-
-      <p class="about-lead">
-        Especialistas en soluciones para pisos residenciales
-        y comerciales.
-      </p>
-
-      <p class="about-text">
-        Acompañamos cada proyecto desde la elección del material
-        hasta la instalación, mantenimiento y terminación final,
-        buscando resultados resistentes y visualmente impecables.
-      </p>
-
-      <div class="benefits">
-
-        <div class="benefit">
-          Materiales seleccionados
-        </div>
-
-        <div class="benefit">
-          Acabados profesionales
-        </div>
-
-        <div class="benefit">
-          Atención personalizada
-        </div>
-
-        <div class="benefit">
-          Venta por mayor y menor
-        </div>
-
-        <div class="benefit">
-          Atención a nivel nacional
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="cta">
-
-    <p class="label">
-      ¿TIENES UN PROYECTO?
+    <p class="etiqueta">
+      VENTA · INSTALACIÓN · RESTAURACIÓN
     </p>
 
-    <h2>
-      Dale a tus espacios el piso que merecen.
-    </h2>
+    <h1>
+      Pisos que transforman
+      <span>cada espacio.</span>
+    </h1>
 
-    <p>
-      Cuéntanos qué necesitas y solicita una cotización.
+    <p class="hero-texto">
+
+      Parquet, parquetón, pisos SPC y laminados
+      de alta calidad para hogares, oficinas
+      y proyectos comerciales.
+
+      Instalación profesional y acabados
+      que hacen la diferencia.
+
     </p>
 
-    <a class="btn btn-dark"
-       target="_blank"
-       href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20quiero%20cotizar%20mi%20proyecto.">
-      COTIZAR POR WHATSAPP
-    </a>
 
-  </section>
+    <div class="botones">
 
+      <a
+        class="btn btn-dorado"
+        target="_blank"
+        href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20quiero%20solicitar%20una%20cotizacion.">
 
-  <section class="contact" id="contacto">
+        Solicitar cotización
 
-    <div class="container contact-grid">
-
-      <div class="contact-brand">
-
-        <span class="brand-mark">PA</span>
-
-        <h3>Parquet Aranibar</h3>
-
-        <p>
-          Pisos · Madera · Acabados
-        </p>
-
-      </div>
+      </a>
 
 
-      <div class="contact-col">
+      <a
+        class="btn btn-borde"
+        href="#productos">
 
-        <span>CONTACTO</span>
+        Ver nuestros pisos
 
-        <a href="tel:+51935695708">
-          +51 935 695 708
-        </a>
-
-        <a target="_blank"
-           href="https://wa.me/51935695708">
-          WhatsApp
-        </a>
-
-      </div>
-
-
-      <div class="contact-col">
-
-        <span>SERVICIOS</span>
-
-        <p>Parquet & Parquetón</p>
-        <p>Pisos SPC</p>
-        <p>Pisos Laminados</p>
-        <p>Pulido y restauración</p>
-        <p>Trabajos en madera</p>
-
-      </div>
+      </a>
 
     </div>
-
-  </section>
-
-</main>
-
-
-<footer class="footer">
-
-  <div class="container footer-inner">
-
-    <p>
-      © 2026 Parquet Aranibar
-    </p>
-
-    <p>
-      Venta · Instalación · Pulido · Restauración
-    </p>
 
   </div>
 
-</footer>
+
+  <div class="hero-info">
+
+    <div>
+      <span>01</span>
+      <strong>Parquet</strong>
+      <small>Madera natural</small>
+    </div>
+
+    <div>
+      <span>02</span>
+      <strong>SPC</strong>
+      <small>Alta resistencia</small>
+    </div>
+
+    <div>
+      <span>03</span>
+      <strong>Laminado</strong>
+      <small>Diseño contemporáneo</small>
+    </div>
+
+  </div>
+
+</section>
 
 
-<a class="whatsapp"
-   target="_blank"
-   href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20quisiera%20informacion."
-   aria-label="Contactar por WhatsApp">
 
-  <svg viewBox="0 0 32 32">
-    <path d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.53 1.74 6.5L3 29l6.66-1.75A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.8a10.75 10.75 0 0 1-5.48-1.5l-.39-.23-3.95 1.04 1.05-3.85-.25-.4A10.73 10.73 0 1 1 16 26.8Zm5.9-8.04c-.32-.16-1.91-.94-2.21-1.05-.3-.11-.52-.16-.74.16-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.37-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.32-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.32.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.43-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.5.21 2.06.13.63-.09 1.91-.78 2.18-1.53.27-.75.27-1.38.19-1.51-.08-.14-.3-.22-.62-.38Z"/>
-  </svg>
+<!-- PRESENTACION -->
 
-  <span>WhatsApp</span>
+<section class="presentacion">
 
-</a>
+  <div class="contenedor presentacion-grid">
 
-</body>
-</html>
+    <div>
+
+      <p class="mini">
+        PARQUET ARANIBAR
+      </p>
+
+      <h2 class="titulo">
+        Calidad que se aprecia
+        desde el primer paso.
+      </h2>
+
+    </div>
+
+
+    <div class="presentacion-texto">
+
+      <strong>
+        El piso transforma por completo
+        la apariencia de un ambiente.
+      </strong>
+
+      <p>
+
+        Trabajamos con materiales seleccionados,
+        instalación profesional y atención personalizada
+        para conseguir pisos elegantes,
+        resistentes y duraderos.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- PRODUCTOS -->
+
+<section class="productos" id="productos">
+
+  <div class="contenedor">
+
+    <div class="productos-cabeza">
+
+      <div>
+
+        <p class="mini">
+          NUESTRA COLECCIÓN
+        </p>
+
+        <h2 class="titulo">
+          El piso ideal
+          para cada proyecto.
+        </h2>
+
+      </div>
+
+      <p>
+
+        Soluciones para viviendas,
+        oficinas, comercios y espacios
+        de alto tránsito.
+
+      </p>
+
+    </div>
+
+
+    <div class="grid-productos">
+
+
+      <!-- PARQUET -->
+
+      <article class="producto">
+
+        <img
+          src="img/parquet-sala.jpg.jpeg"
+          alt="Piso de parquet y parquetón">
+
+        <span class="numero">01</span>
+
+        <div class="producto-texto">
+
+          <span>MADERA NATURAL</span>
+
+          <h3>
+            Parquet & Parquetón
+          </h3>
+
+          <p>
+            Madera natural, calidez,
+            elegancia y acabados profesionales.
+          </p>
+
+          <a
+            class="producto-link"
+            target="_blank"
+            href="https://wa.me/51935695708?text=Hola,%20deseo%20informacion%20sobre%20Parquet%20y%20Parqueton.">
+
+            CONSULTAR →
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- SPC -->
+
+      <article class="producto">
+
+        <img
+          src="img/spc-sala.jpg.jpeg"
+          alt="Piso SPC de alta calidad">
+
+        <span class="numero">02</span>
+
+        <div class="producto-texto">
+
+          <span>ALTA CALIDAD · ALTO TRÁNSITO</span>
+
+          <h3>
+            Piso SPC
+          </h3>
+
+          <p>
+            Resistencia, diseño contemporáneo
+            y práctico sistema Click.
+          </p>
+
+          <a
+            class="producto-link"
+            target="_blank"
+            href="https://wa.me/51935695708?text=Hola,%20deseo%20informacion%20sobre%20Piso%20SPC.">
+
+            CONSULTAR →
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- LAMINADO -->
+
+      <article class="producto">
+
+        <img
+          src="img/laminado-sala.jpg.jpeg"
+          alt="Piso laminado de alta calidad">
+
+        <span class="numero">03</span>
+
+        <div class="producto-texto">
+
+          <span>ALTA CALIDAD · ALTO TRÁNSITO</span>
+
+          <h3>
+            Piso Laminado
+          </h3>
+
+          <p>
+            Diseño elegante y apariencia
+            natural para interiores modernos.
+          </p>

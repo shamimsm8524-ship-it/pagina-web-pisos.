@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shamimsm8524-ship-it.github.io/pagina-web-pisos./sitemap.xml

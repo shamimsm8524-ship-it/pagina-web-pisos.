@@ -288,6 +288,20 @@
         <img src="img/logo-parquet-aranibar.jpg.jpeg" alt="Parquet Aranibar" class="footer-logo">
         <h2>Parquet Aranibar</h2>
         <p>Venta, instalación, mantenimiento y restauración de pisos con atención personalizada.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;">
+          <a href="https://www.facebook.com/share/1CJhiikRp9/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Parquet Aranibar" style="display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #ddd3c7;border-radius:999px;background:#fff;color:#103846;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(20,36,42,.06);">
+            <span style="width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#103846;color:#fff;font-family:Arial,sans-serif;font-size:16px;font-weight:900;">f</span>
+            Facebook
+          </a>
+          <a href="https://www.tiktok.com/@parquetaranibar" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Parquet Aranibar" style="display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #ddd3c7;border-radius:999px;background:#fff;color:#103846;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(20,36,42,.06);">
+            <span style="width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#111;color:#fff;font-size:15px;font-weight:900;">♪</span>
+            TikTok
+          </a>
+          <a href="https://youtube.com/@parquetaranibar" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Parquet Aranibar" style="display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #ddd3c7;border-radius:999px;background:#fff;color:#103846;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(20,36,42,.06);">
+            <span style="width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#b96f3f;color:#fff;font-size:12px;font-weight:900;">▶</span>
+            YouTube
+          </a>
+        </div>
       </div>
       <div class="contact-col">
         <span>CONTACTO</span>
@@ -354,7 +368,14 @@ function sendQuote(event){
   const ubicacion=document.getElementById('ubicacion').value.trim();
   const metros=document.getElementById('metros').value.trim();
   const mensaje=document.getElementById('mensaje').value.trim();
-  const texto=`Hola Parquet Aranibar, deseo una cotización.\n\nNombre: ${nombre}\nTeléfono: ${telefono}\nServicio: ${servicio}\nDistrito/Ciudad: ${ubicacion}\nMetros aproximados: ${metros||'No indicado'}\nDetalle: ${mensaje||'No indicado'}`;
+  const texto=`Hola Parquet Aranibar, deseo una cotización.\
+\
+Nombre: ${nombre}\
+Teléfono: ${telefono}\
+Servicio: ${servicio}\
+Distrito/Ciudad: ${ubicacion}\
+Metros aproximados: ${metros||'No indicado'}\
+Detalle: ${mensaje||'No indicado'}`;
   window.open('https://wa.me/51935695708?text='+encodeURIComponent(texto),'_blank');
 }
 

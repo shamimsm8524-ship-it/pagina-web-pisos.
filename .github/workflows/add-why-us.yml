@@ -1,0 +1,29 @@
+name: Add Why Us Section
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/add-why-us.yml'
+      - 'tools/add-why-us.py'
+permissions:
+  contents: write
+jobs:
+  update-page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add section
+        run: python tools/add-why-us.py
+      - name: Commit update
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Agregar sección Por qué elegirnos [skip ci]"
+          git push

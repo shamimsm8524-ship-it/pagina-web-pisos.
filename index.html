@@ -6,33 +6,22 @@
 
 <title>Parquet Aranibar | Pisos y Acabados</title>
 
-<meta name="description"
-content="Venta, instalación, pulido y restauración de parquet, parquetón, pisos SPC, laminados, zócalos y acabados.">
-
 <style>
-
-/* =========================
-GENERAL
-========================= */
-
 :root{
-  --azul:#123b4a;
-  --azul-oscuro:#082b37;
-  --madera:#bd7544;
-  --madera-clara:#dda06b;
+  --azul:#103846;
+  --azul2:#082934;
+  --madera:#b96f3f;
+  --crema:#f7f3ed;
   --blanco:#ffffff;
-  --marfil:#f8f5ef;
-  --crema:#f0ebe3;
-  --texto:#262626;
-  --gris:#6f6f6f;
-  --linea:#e3ddd5;
+  --gris:#6b6b6b;
+  --linea:#e4ddd4;
   --verde:#25d366;
 }
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -42,7 +31,7 @@ html{
 body{
   font-family:Arial,Helvetica,sans-serif;
   background:#fff;
-  color:var(--texto);
+  color:#262626;
   line-height:1.6;
 }
 
@@ -63,73 +52,65 @@ textarea{
   font:inherit;
 }
 
-button{
-  cursor:pointer;
-}
-
-.contenedor{
+.container{
   width:min(1180px,92%);
   margin:auto;
 }
 
-.mini{
+.label{
   color:var(--madera);
-  font-size:10px;
-  font-weight:bold;
+  font-size:11px;
   letter-spacing:3px;
-  margin-bottom:14px;
+  font-weight:bold;
+  margin-bottom:12px;
 }
 
-.titulo{
+.title{
   font-family:Georgia,serif;
+  color:var(--azul2);
   font-weight:normal;
-  color:var(--azul-oscuro);
-  font-size:clamp(37px,5vw,57px);
+  font-size:clamp(38px,5vw,58px);
   line-height:1.08;
 }
 
-
-/* =========================
-HEADER
-========================= */
+/* HEADER */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.97);
+  background:#fff;
   border-bottom:1px solid var(--linea);
-  box-shadow:0 3px 18px rgba(0,0,0,.04);
 }
 
 .header{
-  min-height:90px;
+  min-height:88px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:20px;
 }
 
-.marca{
+.brand{
   display:flex;
   align-items:center;
   gap:13px;
 }
 
-.logo-header{
-  width:85px;
-  height:70px;
+.logo{
+  width:82px;
+  height:68px;
   object-fit:contain;
 }
 
-.marca-texto strong{
+.brand-text strong{
   display:block;
   font-family:Georgia,serif;
   color:var(--azul);
   font-size:19px;
 }
 
-.marca-texto small{
+.brand-text small{
   color:var(--madera);
   font-size:9px;
   letter-spacing:2px;
@@ -149,7 +130,7 @@ nav a:hover{
   color:var(--madera);
 }
 
-.btn-header{
+.header-button{
   background:var(--azul);
   color:white;
   padding:11px 18px;
@@ -158,38 +139,33 @@ nav a:hover{
   font-weight:bold;
 }
 
-
-/* =========================
-HERO
-========================= */
+/* HERO */
 
 .hero{
-  min-height:700px;
+  min-height:690px;
   display:flex;
   align-items:center;
-
   background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.98) 0%,
-      rgba(255,255,255,.93) 34%,
-      rgba(255,255,255,.54) 58%,
-      rgba(255,255,255,.08) 82%
-    ),
-    url("./img/parquet-sala.jpg.jpeg")
-    center/cover no-repeat;
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,.98) 0%,
+    rgba(255,255,255,.91) 36%,
+    rgba(255,255,255,.50) 60%,
+    rgba(255,255,255,.05) 82%
+  ),
+  url("img/parquet-sala.jpg.jpeg") center/cover no-repeat;
 }
 
-.hero-contenido{
-  max-width:710px;
+.hero-content{
+  max-width:700px;
   padding:80px 0;
 }
 
 .hero h1{
   font-family:Georgia,serif;
+  color:var(--azul2);
+  font-size:clamp(50px,7vw,82px);
   font-weight:normal;
-  color:var(--azul-oscuro);
-  font-size:clamp(49px,7vw,83px);
   line-height:1.02;
   margin-bottom:24px;
 }
@@ -201,14 +177,14 @@ HERO
 }
 
 .hero p{
-  color:#4e4e4e;
-  max-width:590px;
+  max-width:600px;
+  color:#4d4d4d;
   font-size:16px;
   line-height:1.9;
-  margin-bottom:32px;
+  margin-bottom:30px;
 }
 
-.botones{
+.buttons{
   display:flex;
   gap:13px;
   flex-wrap:wrap;
@@ -225,21 +201,18 @@ HERO
   border-radius:3px;
 }
 
-.btn-madera{
+.btn-main{
   background:var(--madera);
   color:white;
 }
 
-.btn-borde{
-  background:white;
-  color:var(--azul);
+.btn-outline{
   border:1px solid var(--azul);
+  background:#fff;
+  color:var(--azul);
 }
 
-
-/* =========================
-INTRO
-========================= */
+/* INTRO */
 
 .intro{
   padding:100px 0;
@@ -252,187 +225,178 @@ INTRO
   align-items:center;
 }
 
-.intro-texto strong{
+.intro-text strong{
   display:block;
   font-family:Georgia,serif;
-  font-size:24px;
+  font-size:25px;
   font-weight:normal;
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
-.intro-texto p{
+.intro-text p{
   color:var(--gris);
   line-height:1.9;
 }
 
+/* PRODUCTOS */
 
-/* =========================
-PRODUCTOS
-========================= */
-
-.productos{
-  background:var(--marfil);
+.products{
   padding:100px 0;
+  background:var(--crema);
 }
 
-.cabecera-seccion{
+.section-top{
   display:flex;
-  align-items:end;
   justify-content:space-between;
-  gap:50px;
+  align-items:end;
+  gap:40px;
   margin-bottom:42px;
 }
 
-.cabecera-seccion > p{
+.section-top p{
   max-width:380px;
   color:var(--gris);
 }
 
-.productos-grid{
+.product-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
 
-.producto{
+.card{
   background:white;
   border:1px solid var(--linea);
   overflow:hidden;
-  box-shadow:0 9px 28px rgba(0,0,0,.05);
+  box-shadow:0 8px 28px rgba(0,0,0,.05);
 }
 
-.producto img{
+.card img{
   height:330px;
   object-fit:cover;
 }
 
-.producto-info{
+.card-body{
   padding:26px;
 }
 
-.producto-info span{
+.card-body span{
   color:var(--madera);
   font-size:9px;
-  letter-spacing:2px;
   font-weight:bold;
+  letter-spacing:2px;
 }
 
-.producto-info h3{
+.card-body h3{
   font-family:Georgia,serif;
+  color:var(--azul);
   font-size:28px;
   font-weight:normal;
-  color:var(--azul);
-  margin:8px 0 11px;
+  margin:8px 0 10px;
 }
 
-.producto-info p{
+.card-body p{
   color:var(--gris);
   font-size:13px;
   margin-bottom:18px;
 }
 
-.producto-info a{
+.card-body a{
   color:var(--azul);
   font-size:11px;
   font-weight:bold;
-  border-bottom:1px solid var(--madera);
 }
 
+/* INSTALACION */
 
-/* =========================
-INSTALACION
-========================= */
-
-.instalacion{
+.install{
   padding:105px 0;
 }
 
-.instalacion-grid{
+.install-grid{
   display:grid;
   grid-template-columns:1.05fr .95fr;
   gap:70px;
   align-items:center;
 }
 
-.instalacion img{
-  height:590px;
+.install img{
+  height:580px;
   object-fit:cover;
 }
 
-.instalacion-texto > p{
+.install-text p{
   color:var(--gris);
-  margin:23px 0;
+  margin:22px 0;
   line-height:1.9;
 }
 
-.lista{
+.check-list{
   border-top:1px solid var(--linea);
 }
 
-.lista div{
+.check-list div{
   padding:14px 0;
   border-bottom:1px solid var(--linea);
 }
 
-.lista div::before{
+.check-list div::before{
   content:"✓";
   color:var(--madera);
   font-weight:bold;
-  margin-right:12px;
+  margin-right:10px;
 }
 
+/* SERVICIOS */
 
-/* =========================
-SERVICIOS
-========================= */
-
-.servicios{
-  background:#f5f1eb;
+.services{
   padding:100px 0;
+  background:#f5f1eb;
 }
 
-.servicios-texto{
+.services-intro{
   max-width:700px;
-  margin-bottom:40px;
+  margin-bottom:38px;
 }
 
-.servicios-texto p{
+.services-intro p{
   color:var(--gris);
-  margin-top:18px;
+  margin-top:15px;
 }
 
-.servicios-grid{
+.service-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
-.servicio{
-  background:white;
+.service{
+  background:#fff;
   border:1px solid var(--linea);
   overflow:hidden;
 }
 
-.servicio-btn{
+.service button{
   width:100%;
-  border:0;
-  background:white;
-  padding:25px;
+  border:none;
+  background:#fff;
+  padding:24px;
   text-align:left;
+  cursor:pointer;
 }
 
-.servicio-top{
+.service-head{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
-.numero{
+.number{
   width:48px;
   height:48px;
-  border-radius:50%;
   background:var(--azul);
-  color:white;
+  color:#fff;
+  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -440,161 +404,119 @@ SERVICIOS
   font-size:18px;
 }
 
-.flecha{
+.arrow{
   color:var(--madera);
   font-size:24px;
-  transition:.3s;
 }
 
-.servicio.activo .flecha{
-  transform:rotate(180deg);
-}
-
-.servicio h3{
-  color:var(--azul);
+.service h3{
   font-family:Georgia,serif;
+  color:var(--azul);
   font-size:23px;
   font-weight:normal;
   margin:20px 0 7px;
 }
 
-.servicio-btn p{
+.service button p{
   color:var(--gris);
   font-size:13px;
 }
 
-.servicio-contenido{
+.service-photo{
   display:none;
 }
 
-.servicio.activo .servicio-contenido{
+.service.open .service-photo{
   display:block;
 }
 
-.servicio-contenido img{
-  height:275px;
+.service-photo img{
+  height:280px;
   object-fit:cover;
 }
 
-.servicio-descripcion{
-  padding:18px 23px 23px;
+.service-photo p{
+  padding:18px 22px 22px;
   color:var(--gris);
   font-size:13px;
 }
 
+/* GALERIA */
 
-/* =========================
-ZOCALOS
-========================= */
-
-.zocalos{
-  padding:105px 0;
-}
-
-.zocalos-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:70px;
-  align-items:center;
-}
-
-.zocalos p{
-  color:var(--gris);
-  margin-top:20px;
-  line-height:1.9;
-}
-
-.zocalos img{
-  height:500px;
-  object-fit:cover;
-}
-
-
-/* =========================
-GALERIA
-========================= */
-
-.galeria{
-  background:var(--marfil);
+.gallery{
   padding:100px 0;
+  background:#fff;
 }
 
-.galeria-grid{
+.gallery-grid{
   margin-top:40px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
-.galeria-item{
-  background:white;
-  border:1px solid var(--linea);
+.gallery-item{
+  background:var(--crema);
 }
 
-.galeria-item img{
-  height:315px;
+.gallery-item img{
+  height:320px;
   object-fit:cover;
 }
 
-.galeria-item h3{
+.gallery-item h3{
   font-family:Georgia,serif;
   color:var(--azul);
   font-size:20px;
   font-weight:normal;
-  padding:18px;
+  padding:17px;
 }
 
+/* FORMULARIO */
 
-/* =========================
-FORMULARIO
-========================= */
-
-.cotizacion{
+.quote{
   padding:105px 0;
-  background:white;
+  background:var(--crema);
 }
 
-.cotizacion-grid{
+.quote-grid{
   display:grid;
   grid-template-columns:.85fr 1.15fr;
-  gap:75px;
-  align-items:start;
+  gap:70px;
 }
 
-.cotizacion-info p{
+.quote-info p{
   color:var(--gris);
   line-height:1.9;
-  margin-top:20px;
+  margin-top:18px;
 }
 
-.telefono{
-  margin-top:28px;
+.phone-box{
+  margin-top:25px;
+  padding-top:20px;
   border-top:1px solid var(--linea);
-  padding-top:22px;
 }
 
-.telefono strong{
+.phone-box strong{
   display:block;
   color:var(--madera);
   font-size:10px;
   letter-spacing:2px;
-  margin-bottom:7px;
 }
 
-.telefono a{
+.phone-box a{
   font-family:Georgia,serif;
   font-size:27px;
   color:var(--azul);
 }
 
-.formulario{
-  background:var(--marfil);
-  padding:36px;
+.form{
+  background:#fff;
+  padding:34px;
   border:1px solid var(--linea);
-  box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
 
-.formulario h3{
+.form h3{
   font-family:Georgia,serif;
   color:var(--azul);
   font-size:30px;
@@ -602,241 +524,704 @@ FORMULARIO
   margin-bottom:8px;
 }
 
-.formulario > p{
+.form > p{
   color:var(--gris);
   font-size:13px;
-  margin-bottom:26px;
+  margin-bottom:25px;
 }
 
-.doble{
+.double{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:15px;
 }
 
-.campo{
+.field{
   margin-bottom:15px;
 }
 
-.campo label{
+.field label{
   display:block;
-  margin-bottom:6px;
   font-size:11px;
   font-weight:bold;
+  margin-bottom:6px;
 }
 
-.campo input,
-.campo select,
-.campo textarea{
+.field input,
+.field select,
+.field textarea{
   width:100%;
-  border:1px solid #d9d1c7;
+  border:1px solid #d7d0c7;
   background:white;
   padding:13px;
   outline:none;
 }
 
-.campo input,
-.campo select{
+.field input,
+.field select{
   height:50px;
 }
 
-.campo textarea{
-  min-height:130px;
+.field textarea{
+  min-height:125px;
   resize:vertical;
 }
 
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus{
-  border-color:var(--madera);
-}
-
-.enviar{
+.send{
   width:100%;
   min-height:54px;
-  border:0;
+  border:none;
   background:var(--azul);
   color:white;
-  font-weight:bold;
   font-size:12px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.enviar:hover{
-  background:var(--madera);
-}
-
-
-/* =========================
-CTA
-========================= */
+/* CTA */
 
 .cta{
+  padding:82px 20px;
   background:var(--azul);
   color:white;
   text-align:center;
-  padding:85px 20px;
 }
 
 .cta h2{
   font-family:Georgia,serif;
-  font-size:clamp(40px,6vw,64px);
+  font-size:clamp(40px,6vw,62px);
   font-weight:normal;
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .cta p{
-  color:#d7e2e5;
-  margin-bottom:25px;
+  color:#d7e3e6;
+  margin-bottom:24px;
 }
 
-.btn-blanco{
+.btn-white{
   background:white;
   color:var(--azul);
 }
 
+/* CONTACTO */
 
-/* =========================
-CONTACTO
-========================= */
-
-.contacto{
+.contact{
   padding:85px 0;
-  background:white;
+  background:#fff;
 }
 
-.contacto-grid{
+.contact-grid{
   display:grid;
   grid-template-columns:1.3fr .8fr .8fr;
-  gap:60px;
+  gap:55px;
 }
 
-.logo-footer{
+.footer-logo{
   width:210px;
   height:140px;
   object-fit:contain;
   object-position:left center;
 }
 
-.contacto h3{
+.contact h3{
   font-family:Georgia,serif;
   color:var(--azul);
   font-size:29px;
   font-weight:normal;
 }
 
-.contacto small{
+.contact small{
   color:var(--gris);
 }
 
-.contacto-col strong{
+.contact-col strong{
   display:block;
   color:var(--madera);
   font-size:10px;
   letter-spacing:2px;
-  margin-bottom:13px;
+  margin-bottom:12px;
 }
 
-.contacto-col a{
+.contact-col a{
   display:block;
-  padding:10px 0;
+  padding:9px 0;
   border-bottom:1px solid var(--linea);
 }
 
-.contacto-col p{
+.contact-col p{
   color:var(--gris);
   margin:5px 0;
 }
 
-
-/* =========================
-FOOTER
-========================= */
-
 footer{
   background:#f1ede7;
-  border-top:1px solid var(--linea);
   padding:22px 0;
   color:#777;
   font-size:11px;
 }
 
-.footer{
+.footer-row{
   display:flex;
   justify-content:space-between;
   gap:15px;
 }
 
-
-/* =========================
-WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp{
   position:fixed;
-  z-index:5000;
   right:20px;
   bottom:20px;
-
+  z-index:5000;
   height:58px;
   padding:0 19px;
-
   display:flex;
   align-items:center;
   gap:9px;
-
+  border-radius:40px;
   background:var(--verde);
   color:white;
-  border-radius:40px;
   font-weight:bold;
-
   box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
 .whatsapp svg{
-  width:25px;
+  width:24px;
   fill:white;
 }
 
-
-/* =========================
-RESPONSIVE
-========================= */
+/* CELULAR */
 
 @media(max-width:950px){
-
   nav{
     display:none;
   }
 
-  .productos-grid{
+  .product-grid{
     grid-template-columns:1fr;
   }
 
-  .servicios-grid{
+  .service-grid{
     grid-template-columns:1fr 1fr;
   }
 
   .intro-grid,
-  .instalacion-grid,
-  .zocalos-grid,
-  .cotizacion-grid{
+  .install-grid,
+  .quote-grid{
     grid-template-columns:1fr;
   }
 
-  .galeria-grid{
+  .gallery-grid{
     grid-template-columns:1fr 1fr;
   }
 
-  .contacto-grid{
+  .contact-grid{
     grid-template-columns:1fr;
   }
 }
 
 @media(max-width:620px){
-
-  .header{
-    min-height:74px;
+  .logo{
+    width:58px;
+    height:54px;
   }
 
-  .logo-header{
+  .brand-text strong{
+    font-size:13px;
+  }
+
+  .brand-text small{
+    display:none;
+  }
+
+  .header-button{
+    padding:9px 10px;
+    font-size:9px;
+  }
+
+  .hero{
+    min-height:650px;
+    background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.96),
+      rgba(255,255,255,.78)
+    ),
+    url("img/parquet-sala.jpg.jpeg") center/cover no-repeat;
+  }
+
+  .hero h1{
+    font-size:47px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .section-top{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .service-grid,
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .double{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .form{
+    padding:22px 18px;
+  }
+
+  .footer-row{
+    flex-direction:column;
+  }
+
+  .whatsapp{
     width:58px;
+    padding:0;
+    justify-content:center;
+  }
+
+  .whatsapp span{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header">
+
+    <a href="#inicio" class="brand">
+      <img
+        class="logo"
+        src="img/logo-parquet-aranibar.png.jpeg"
+        onerror="this.onerror=null;this.src='img/logo-parquet-aranibar.jpg.jpeg';"
+        alt="Parquet Aranibar">
+
+      <div class="brand-text">
+        <strong>PARQUET ARANIBAR</strong>
+        <small>PISOS · MADERA · ACABADOS</small>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#pisos">Pisos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#cotizacion">Cotización</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="header-button" href="#cotizacion">
+      COTIZAR
+    </a>
+
+  </div>
+</header>
+
+
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+
+    <div class="label">
+      VENTA · INSTALACIÓN · RESTAURACIÓN
+    </div>
+
+    <h1>
+      Pisos que transforman
+      <span>cada espacio.</span>
+    </h1>
+
+    <p>
+      Parquet, parquetón, pisos SPC y laminados de alta calidad
+      para hogares, oficinas y proyectos comerciales.
+      Instalación profesional y acabados que hacen la diferencia.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-main" href="#cotizacion">
+        SOLICITAR COTIZACIÓN
+      </a>
+
+      <a class="btn btn-outline" href="#pisos">
+        VER NUESTROS PISOS
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="intro">
+  <div class="container intro-grid">
+
+    <div>
+      <div class="label">PARQUET ARANIBAR</div>
+
+      <h2 class="title">
+        Calidad que se aprecia desde el primer paso.
+      </h2>
+    </div>
+
+    <div class="intro-text">
+      <strong>
+        El piso transforma por completo la apariencia de un ambiente.
+      </strong>
+
+      <p>
+        Trabajamos con materiales seleccionados,
+        instalación profesional y atención personalizada
+        para conseguir pisos elegantes, resistentes y duraderos.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="products" id="pisos">
+  <div class="container">
+
+    <div class="section-top">
+      <div>
+        <div class="label">NUESTRA COLECCIÓN</div>
+        <h2 class="title">El piso ideal para cada proyecto.</h2>
+      </div>
+
+      <p>
+        Soluciones para hogares, oficinas,
+        comercios y zonas de alto tránsito.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="card">
+        <img src="img/parquet-sala.jpg.jpeg" alt="Parquet">
+
+        <div class="card-body">
+          <span>MADERA NATURAL</span>
+
+          <h3>Parquet & Parquetón</h3>
+
+          <p>
+            Madera natural, calidez y elegancia
+            con acabados profesionales.
+          </p>
+
+          <a target="_blank"
+             href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20deseo%20informacion%20sobre%20Parquet%20y%20Parqueton.">
+            CONSULTAR →
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/spc-sala.jpg.jpeg" alt="Piso SPC">
+
+        <div class="card-body">
+          <span>ALTA CALIDAD · ALTO TRÁNSITO</span>
+
+          <h3>Piso SPC</h3>
+
+          <p>
+            Alta resistencia, diseño moderno
+            y práctico sistema Click.
+          </p>
+
+          <a target="_blank"
+             href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20deseo%20informacion%20sobre%20Piso%20SPC.">
+            CONSULTAR →
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/laminado-sala.jpg.jpeg" alt="Piso laminado">
+
+        <div class="card-body">
+          <span>ALTA CALIDAD · ALTO TRÁNSITO</span>
+
+          <h3>Piso Laminado</h3>
+
+          <p>
+            Apariencia natural y elegante
+            para hogares, oficinas y comercios.
+          </p>
+
+          <a target="_blank"
+             href="https://wa.me/51935695708?text=Hola%20Parquet%20Aranibar,%20deseo%20informacion%20sobre%20Piso%20Laminado.">
+            CONSULTAR →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="install">
+  <div class="container install-grid">
+
+    <div>
+      <img
+        src="img/instalacion-parquet.jpg.jpeg"
+        alt="Instalación profesional">
+    </div>
+
+    <div class="install-text">
+
+      <div class="label">INSTALACIÓN PROFESIONAL</div>
+
+      <h2 class="title">
+        Precisión en cada pieza.
+      </h2>
+
+      <p>
+        Una instalación correcta es fundamental
+        para conseguir un piso firme, uniforme y duradero.
+      </p>
+
+      <div class="check-list">
+        <div>Instalación de parquet</div>
+        <div>Instalación de parquetón</div>
+        <div>Instalación de piso SPC</div>
+        <div>Instalación de piso laminado</div>
+        <div>Pulido y acabado profesional</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="services" id="servicios">
+  <div class="container">
+
+    <div class="services-intro">
+      <div class="label">NUESTROS SERVICIOS</div>
+
+      <h2 class="title">
+        Todo lo que necesitas para renovar tus espacios.
+      </h2>
+
+      <p>
+        Haz clic en cada número para ver el servicio.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service">
+        <button type="button" onclick="toggleService(this)">
+          <div class="service-head">
+            <span class="number">01</span>
+            <span class="arrow">⌄</span>
+          </div>
+
+          <h3>Venta e instalación</h3>
+          <p>Parquet, parquetón, SPC y laminados.</p>
+        </button>
+
+        <div class="service-photo">
+          <img
+            src="img/servicio-instalacion.jpg"
+            onerror="this.onerror=null;this.src='img/instalacion-parquet.jpg.jpeg';"
+            alt="Venta e instalación">
+
+          <p>
+            Instalación profesional para viviendas,
+            oficinas y espacios comerciales.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="service">
+        <button type="button" onclick="toggleService(this)">
+          <div class="service-head">
+            <span class="number">02</span>
+            <span class="arrow">⌄</span>
+          </div>
+
+          <h3>Pulido profesional</h3>
+          <p>Recuperamos brillo, textura y uniformidad.</p>
+        </button>
+
+        <div class="service-photo">
+          <img
+            src="img/servicio-pulido.jpg"
+            onerror="this.onerror=null;this.src='img/parquet-sala.jpg.jpeg';"
+            alt="Pulido profesional">
+
+          <p>
+            Pulido profesional para renovar
+            pisos de madera deteriorados.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="service">
+        <button type="button" onclick="toggleService(this)">
+          <div class="service-head">
+            <span class="number">03</span>
+            <span class="arrow">⌄</span>
+          </div>
+
+          <h3>Restauración</h3>
+          <p>Renovamos pisos deteriorados o antiguos.</p>
+        </button>
+
+        <div class="service-photo">
+          <img
+            src="img/servicio-restauracion.jpg"
+            onerror="this.onerror=null;this.src='img/parquet-sala.jpg.jpeg';"
+            alt="Restauración">
+
+          <p>
+            Recuperamos el color, brillo
+            y apariencia de tus pisos.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="service">
+        <button type="button" onclick="toggleService(this)">
+          <div class="service-head">
+            <span class="number">04</span>
+            <span class="arrow">⌄</span>
+          </div>
+
+          <h3>Trabajos en madera</h3>
+          <p>Puertas, portones, closets y escaleras.</p>
+        </button>
+
+        <div class="service-photo">
+          <img
+            src="img/servicio-madera.jpg"
+            onerror="this.onerror=null;this.src='img/instalacion-parquet.jpg.jpeg';"
+            alt="Trabajos en madera">
+
+          <p>
+            Mantenimiento y acabados
+            para diferentes elementos de madera.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="service">
+        <button type="button" onclick="toggleService(this)">
+          <div class="service-head">
+            <span class="number">05</span>
+            <span class="arrow">⌄</span>
+          </div>
+
+          <h3>Zócalos</h3>
+          <p>Venta e instalación de acabados.</p>
+        </button>
+
+        <div class="service-photo">
+          <img
+            src="img/servicio-zocalos.jpg"
+            onerror="this.onerror=null;this.src='img/zocalo-madera.jpg.jpeg';"
+            alt="Zócalos">
+
+          <p>
+            Zócalos y terminaciones
+            con acabado limpio y profesional.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="service">
+        <button type="button" onclick="toggleService(this)">
+          <div class="service-head">
+            <span class="number">06</span>
+            <span class="arrow">⌄</span>
+          </div>
+
+          <h3>Pintura y resane</h3>
+          <p>Renovación y acabado de paredes.</p>
+        </button>
+
+        <div class="service-photo">
+          <img
+            src="img/servicio-pintura.jpg"
+            onerror="this.onerror=null;this.src='img/servicio-pintura.jpg.jpeg';"
+            alt="Pintura y resane">
+
+          <p>
+            Preparación, resane y pintura
+            para renovar tus ambientes.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="trabajos">
+  <div class="container">
+
+    <div class="label">NUESTROS TRABAJOS</div>
+
+    <h2 class="title">
+      Acabados que hablan por sí solos.
+    </h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="img/parquet-sala.jpg.jpeg" alt="Parquet">
+        <h3>Parquet & Parquetón</h3>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/spc-sala.jpg.jpeg" alt="SPC">
+        <h3>Piso SPC</h3>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/laminado-sala.jpg.jpeg" alt="Laminado">
+        <h3>Piso Laminado</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="quote" id="cotizacion">
+  <div class="container quote-grid">
+
+    <div class="quote-info">
+
+      <div class="label">SOLICITA TU COTIZACIÓN</div>
+
+      <h2 class="title">
+        Cuéntanos sobre tu proyecto.
+      </h2>
+
+      <p>
+        Comple

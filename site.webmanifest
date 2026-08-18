@@ -1,0 +1,11 @@
+{
+  "name": "Parquet Aranibar",
+  "short_name": "Parquet Aranibar",
+  "description": "Venta, instalación y restauración de parquet, pisos SPC y laminados.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#103846",
+  "lang": "es-PE"
+}

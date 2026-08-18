@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://parquetaranibar.live/</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://parquetaranibar.live/img/parquet-sala.jpg.jpeg</image:loc><image:title>Parquet y parquetón</image:title></image:image>
+    <image:image><image:loc>https://parquetaranibar.live/img/spc-sala.jpg.jpeg</image:loc><image:title>Piso SPC de alto tránsito</image:title></image:image>
+    <image:image><image:loc>https://parquetaranibar.live/img/laminado-sala.jpg.jpeg</image:loc><image:title>Piso laminado</image:title></image:image>
+    <image:image><image:loc>https://parquetaranibar.live/img/instalacion-parquet.jpg.jpeg</image:loc><image:title>Instalación profesional de parquet</image:title></image:image>
   </url>
 </urlset>

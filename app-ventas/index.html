@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <title>Mi Negocio | Ventas e Inventario</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Mi Negocio</h1>
+      <p>Ventas e inventario</p>
+    </div>
+    <button id="btnNuevaVenta" class="primary">+ Nueva venta</button>
+  </header>
+
+  <main>
+    <section id="stats" class="stats"></section>
+
+    <nav class="tabs" aria-label="Secciones">
+      <button class="tab active" data-view="productos">Productos</button>
+      <button class="tab" data-view="categorias">Categorías</button>
+      <button class="tab" data-view="ventas">Ventas</button>
+    </nav>
+
+    <section id="productos" class="view active">
+      <div class="toolbar">
+        <input id="buscar" type="search" placeholder="Buscar por nombre, código o categoría" />
+        <button id="btnNuevoProducto" class="primary">+ Producto</button>
+      </div>
+      <div id="filtrosCategorias" class="chips"></div>
+      <div id="listaProductos" class="product-grid"></div>
+    </section>
+
+    <section id="categorias" class="view">
+      <div class="toolbar">
+        <input id="nuevaCategoria" placeholder="Nueva categoría" />
+        <button id="btnAgregarCategoria" class="primary">Agregar</button>
+      </div>
+      <div id="listaCategorias" class="category-list"></div>
+    </section>
+
+    <section id="ventas" class="view">
+      <div id="listaVentas" class="sales-list"></div>
+    </section>
+  </main>
+
+  <dialog id="dlgProducto">
+    <form id="formProducto" method="dialog" class="form-card">
+      <div class="dialog-head"><h2 id="tituloProducto">Nuevo producto</h2><button type="button" class="icon" data-close="dlgProducto">×</button></div>
+      <input type="hidden" id="productoId" />
+      <label>Foto del producto
+        <input id="foto" type="file" accept="image/*" capture="environment" />
+      </label>
+      <img id="previewFoto" class="preview hidden" alt="Vista previa" />
+      <div class="row">
+        <label>Código de barras
+          <input id="codigo" inputmode="numeric" placeholder="Ej. 7751234567890" />
+        </label>
+        <button id="btnEscanear" type="button" class="secondary scan-btn">Escanear</button>
+      </div>
+      <label>Nombre del producto<input id="nombre" required placeholder="Ej. Piso SPC Roble 5 mm" /></label>
+      <label>Categoría<select id="categoria" required></select></label>
+      <div class="two-col">
+        <label>Precio compra (S/)<input id="precioCompra" type="number" min="0" step="0.01" value="0" /></label>
+        <label>Precio venta (S/)<input id="precioVenta" type="number" min="0" step="0.01" required /></label>
+      </div>
+      <div class="two-col">
+        <label>Stock<input id="stock" type="number" min="0" step="1" required value="0" /></label>
+        <label>Unidad<select id="unidad"><option>Unidad</option><option>Caja</option><option>m²</option><option>Paquete</option><option>Galón</option></select></label>
+      </div>
+      <label>Descripción<textarea id="descripcion" rows="3" placeholder="Detalles opcionales"></textarea></label>
+      <div class="actions"><button type="button" class="secondary" data-close="dlgProducto">Cancelar</button><button class="primary" value="default">Guardar producto</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="dlgVenta">
+    <form id="formVenta" method="dialog" class="form-card wide">
+      <div class="dialog-head"><h2>Nueva venta</h2><button type="button" class="icon" data-close="dlgVenta">×</button></div>
+      <div class="row">
+        <input id="ventaBuscar" placeholder="Escanea o busca un producto" />
+        <button id="ventaEscanear" type="button" class="secondary">Escanear</button>
+      </div>
+      <div id="ventaResultados" class="mini-results"></div>
+      <div id="carrito" class="cart"></div>
+      <div class="total">Total: <strong id="ventaTotal">S/ 0.00</strong></div>
+      <div class="actions"><button type="button" class="secondary" data-close="dlgVenta">Cancelar</button><button id="btnCobrar" type="button" class="primary">Cobrar</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="dlgScanner">
+    <div class="scanner-card">
+      <div class="dialog-head"><h2>Escanear código</h2><button type="button" class="icon" id="cerrarScanner">×</button></div>
+      <video id="videoScanner" autoplay playsinline></video>
+      <p id="scannerMsg">Apunta la cámara al código de barras.</p>
+    </div>
+  </dialog>
+
+  <template id="emptyTpl"><div class="empty"><strong>Aún no hay datos</strong><p>Agrega tu primer registro.</p></div></template>
+  <script src="app.js"></script>
+</body>
+</html>

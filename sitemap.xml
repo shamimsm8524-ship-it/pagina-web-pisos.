@@ -6,9 +6,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image><image:loc>https://parquetaranibar.live/img/piso-pasillo.jpg</image:loc><image:title>Instalación profesional de pisos - Parquet Aranibar</image:title></image:image>
-    <image:image><image:loc>https://parquetaranibar.live/img/parquet-sala.jpg.jpeg</image:loc><image:title>Piso de parquet de madera en Lima</image:title></image:image>
-    <image:image><image:loc>https://parquetaranibar.live/img/spc-sala.jpg.jpeg</image:loc><image:title>Piso SPC de alto tránsito en Lima</image:title></image:image>
-    <image:image><image:loc>https://parquetaranibar.live/img/laminado-sala.jpg.jpeg</image:loc><image:title>Piso laminado instalado en Lima</image:title></image:image>
-    <image:image><image:loc>https://parquetaranibar.live/img/instalacion-parquet.jpg.jpeg</image:loc><image:title>Instalación y restauración de parquet</image:title></image:image>
+    <image:image><image:loc>https://parquetaranibar.live/img/parquet-sala.jpg.jpeg</image:loc><image:title>Piso de parquet y parquetón de madera</image:title></image:image>
+    <image:image><image:loc>https://parquetaranibar.live/img/spc-sala.jpg.jpeg</image:loc><image:title>Piso SPC de alto tránsito</image:title></image:image>
+    <image:image><image:loc>https://parquetaranibar.live/img/laminado-sala.jpg.jpeg</image:loc><image:title>Piso laminado de alto tránsito</image:title></image:image>
   </url>
+  <url><loc>https://parquetaranibar.live/pulido-parquet-antipolvo.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><image:image><image:loc>https://parquetaranibar.live/img/servicio-pulido.jpg.jpg</image:loc><image:title>Cepillado y pulido de parquet con máquina antipolvo</image:title></image:image></url>
+  <url><loc>https://parquetaranibar.live/parqueton-shihuahuaco-pumaquiro.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><image:image><image:loc>https://parquetaranibar.live/img/parquet-sala.jpg.jpeg</image:loc><image:title>Parquetón Shihuahuaco y Pumaquiro</image:title></image:image></url>
+  <url><loc>https://parquetaranibar.live/pisos-parquet-provincias-peru.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>

@@ -50,7 +50,7 @@ jobs:
             # SEO principal: marca + servicios + ubicación, sin sobrecargar palabras clave.
             if p.name=='index.html':
               title='Parquet Aranibar | Parquet, Parquetón, SPC y Laminados en Lima'
-              description='Parquet Aranibar: parquet, parquetón, SPC y laminados. Instalación, cepillado, pulido antipolvo, zócalos y restauración en Lima, Callao y provincias.'
+              description='Parquet Aranibar: parquet, parquetón, SPC y laminados. Instalación, cepillado, pulido antipolvo, zócalos y restauración en San Miguel, Lima y provincias.'
               s=re.sub(r'<title>[\s\S]*?</title>',f'<title>{title}</title>',s,count=1)
               s=re.sub(r'<meta\s+name="description"\s+content="[^"]*"\s*/?>',
                        f'<meta name="description" content="{description}">',s,count=1)

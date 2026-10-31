@@ -1,10 +1,4 @@
 'use strict';
-const menu=document.querySelector('.menu'),nav=document.querySelector('#nav');
-function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menú');menu.textContent='☰';}
-menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');menu.textContent=open?'×':'☰';});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus();}});
-window.matchMedia('(min-width:851px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
 const service=document.querySelector('#servicio');
 document.querySelectorAll('[data-service]').forEach(a=>a.addEventListener('click',()=>{service.value=a.dataset.service;}));
 const recommendations={wood:['Consulta por parquet y parquetón: madera natural con opciones de acabado y mantenimiento según el material.','Parquet / Parquetón'],practical:['Consulta por SPC: revisaremos el uso del ambiente, la base y la ficha del producto para elegir una opción adecuada.','Piso SPC'],renew:['Consulta por pulido y restauración. Envíanos fotos para evaluar si tu piso puede recuperarse.','Pulido y restauración'],help:['Te orientamos entre madera natural, SPC y laminado según el ambiente, el acabado y tu presupuesto.','Necesito asesoría']};
